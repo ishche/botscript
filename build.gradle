@@ -1,0 +1,45 @@
+buildscript {
+  repositories {
+    mavenCentral()
+  }
+
+  dependencies {
+    classpath 'org.jsonschema2pojo:jsonschema2pojo-gradle-plugin:0.5.1'
+  }
+}
+
+plugins {
+    id 'java'
+    id 'eclipse'
+    id 'idea'
+}
+
+apply plugin: 'jsonschema2pojo'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+
+
+dependencies {
+    compile('com.google.http-client:google-http-client-gson:1.23.0')
+    compile('javax.validation:validation-api:2.0.1.Final')
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.6'
+}
+
+jsonSchema2Pojo {
+  targetPackage = 'ru.highcode.botscenario.model'
+  annotationStyle = 'gson'
+  includeAdditionalProperties = false
+  includeJsr303Annotations = true
+  includeHashcodeAndEquals = false
+  includeToString = false
+  propertyWordDelimiters = ['_'] as char[]
+}
