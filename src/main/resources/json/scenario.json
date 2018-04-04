@@ -28,6 +28,12 @@
           "text": {
             "type": "string"
           },
+          "textHe": {
+            "type": "string"
+          },
+          "textShe": {
+            "type": "string"
+          },
           "wrongAnswerText": {
             "type": "string"
           },
