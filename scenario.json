@@ -1,0 +1,98 @@
+{
+  "title": "Scenario",
+  "type": "object",
+  "properties": {
+    "version": {
+      "type": "string"
+    },
+    "aliases": {
+      "type": "array",
+      "items": {
+        "title": "Alias",
+        "type": "object",
+        "properties": {
+          "from" : "string",
+          "to": "string"
+        }
+      }
+    },
+    "questions": {
+      "type": "array",
+      "items": {
+        "title": "Question",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          },
+          "wrongAnswerText": {
+            "type": "string"
+          },
+          "answers": {
+            "type": "array",
+            "items": {
+              "title": "Answer",
+              "type": "Object",
+              "properties": {
+                "shortKey": {
+                  "type": "string"
+                },
+                "text": {
+                  "type": "string"
+                },
+                "aliases": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "nextId": {
+                  "type": "string"
+                },
+                "weight": {
+                  "type": "string"
+                },
+                "userText": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "onWait": {
+            "title": "OnWait",
+            "type": "object",
+            "properties": {
+              "timeOut": {
+                "type": "integer"
+              },
+              "nextId": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "title": "Result",
+        "type": "object",
+        "properties": {
+          "from": {
+            "type": "integer"
+          },
+          "to": {
+            "type": "integer"
+          },
+          "text": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
