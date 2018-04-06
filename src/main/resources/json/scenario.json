@@ -28,11 +28,20 @@
           "text": {
             "type": "string"
           },
-          "textHe": {
-            "type": "string"
-          },
-          "textShe": {
-            "type": "string"
+          "conditionalText":{
+            "type": "array",
+            "items": {
+              "title":"ConditionalText",
+              "type":"object",
+              "properties": {
+                "condition": {
+                  "type":"string"
+                },
+                "text": {
+                  "type":"string"
+                }
+              }
+            }
           },
           "wrongAnswerText": {
             "type": "string"
