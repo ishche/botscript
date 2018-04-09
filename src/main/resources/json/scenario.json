@@ -11,8 +11,8 @@
         "title": "Alias",
         "type": "object",
         "properties": {
-          "from" : "string",
-          "to": "string"
+          "from" : { "type": "string" },
+          "to": { "type": "string" }
         }
       }
     },
