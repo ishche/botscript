@@ -46,6 +46,9 @@
           "wrongAnswerText": {
             "type": "string"
           },
+          "postAnswerHook": {
+            "type": "string"
+          },
           "answers": {
             "type": "array",
             "items": {
