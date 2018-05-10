@@ -11,8 +11,15 @@
         "title": "Alias",
         "type": "object",
         "properties": {
-          "from" : { "type": "string" },
-          "to": { "type": "string" }
+          "from": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "to": {
+            "type": "string"
+          }
         }
       }
     },
@@ -28,17 +35,17 @@
           "text": {
             "type": "string"
           },
-          "conditionalText":{
+          "conditionalText": {
             "type": "array",
             "items": {
-              "title":"ConditionalText",
-              "type":"object",
+              "title": "ConditionalText",
+              "type": "object",
               "properties": {
                 "condition": {
-                  "type":"string"
+                  "type": "string"
                 },
                 "text": {
-                  "type":"string"
+                  "type": "string"
                 }
               }
             }
