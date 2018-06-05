@@ -115,6 +115,21 @@
           },
           "text": {
             "type": "string"
+          },
+          "ConditionalResult": {
+            "type": "array",
+            "items": {
+              "title": "ConditionalResult",
+              "type": "object",
+              "properties": {
+                "condition": {
+                  "type": "string"
+                },
+                "text": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       }
