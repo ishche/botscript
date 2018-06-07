@@ -116,7 +116,7 @@
           "text": {
             "type": "string"
           },
-          "ConditionalResult": {
+          "conditionalResult": {
             "type": "array",
             "items": {
               "title": "ConditionalResult",
