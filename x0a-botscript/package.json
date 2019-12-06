@@ -1,0 +1,48 @@
+{
+	"name": "x0a-botscript",
+	"displayName": "BotScript Editor",
+	"description": "Editor for BotScript files",
+	"version": "0.0.1",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ishche/botscript"
+	},
+	"engines": {
+		"vscode": "^1.40.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"jsonValidation": [
+			{
+				"fileMatch": "*.botscript",
+				"url": "https://raw.githubusercontent.com/ishche/botscript/master/src/main/resources/json/scenario.schema.json"
+			}
+		],
+		"languages": [
+			{
+				"id": "JSON",
+				"filenamePatterns": ["*.botscript"]
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "yarn run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "yarn run compile"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.1",
+		"@types/node": "^12.11.7",
+		"@types/vscode": "^1.40.0",
+		"glob": "^7.1.5",
+		"typescript": "^3.6.4",
+		"tslint": "^5.20.0"
+	}
+}

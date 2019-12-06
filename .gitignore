@@ -4,3 +4,5 @@
 /.project
 /.classpath
 /build
+node_modules
+out
